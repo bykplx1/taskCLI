@@ -3,12 +3,14 @@
 # Task CLI Application
 
 This is a simple command-line tool for managing tasks. You can add, update, delete, and change the status of tasks, all through commands in your terminal.
+This project is 
 
 ## Table of Contents
 - [About](#about)
 - [Setup](#setup)
 - [Commands](#commands)
 - [Testing](#testing)
+- [Acknowledgments](#acknowledgments)
 
 ## About
 
@@ -183,4 +185,8 @@ Errors: 0
 Failures: 0
 ✅ ALL TESTS PASSED! ✅
 ```
+## Acknowledgments
+
+This project idea was inspired by [Task Tracker CLI - Roadmap.sh](https://roadmap.sh/projects/task-tracker). Special thanks to the author for sharing the concept!
+
 ---
