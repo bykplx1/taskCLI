@@ -26,8 +26,8 @@ def add_task(description):
         'id': task_id,
         'description': description,
         'status': 'todo',
-        'createdAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'createdAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
+        'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
     }
     tasks.append(task)
     write_tasks(tasks)
@@ -38,7 +38,7 @@ def update_task(task_id, new_description):
     task = next((task for task in tasks if task['id'] == int(task_id)), None)
     if task:
         task['description'] = new_description
-        task['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        task['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         write_tasks(tasks)
         print(f"Task {task_id} updated successfully.")
     else:
@@ -55,7 +55,7 @@ def change_task_status(task_id, new_status):
     task = next((task for task in tasks if task['id'] == int(task_id)), None)
     if task:
         task['status'] = new_status
-        task['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        task['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         write_tasks(tasks)
         print(f"Task {task_id} status changed to {new_status}.")
     else:
@@ -69,8 +69,10 @@ def list_tasks(status=None):
     if tasks:
         for task in tasks:
             print(f"ID: {task['id']}, Description: {task['description']}, Status: {task['status']}, CreatedAt: {task['createdAt']}, UpdatedAt: {task['updatedAt']}")
+        return tasks
     else:
         print("No tasks found.")
+        return []
 
 def main():
     if len(sys.argv) < 2:
