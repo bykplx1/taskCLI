@@ -9,7 +9,6 @@ This is a simple command-line tool for managing tasks. You can add, update, dele
 - [Setup](#setup)
 - [Commands](#commands)
 - [Testing](#testing)
-- [License](#license)
 
 ## About
 
@@ -184,9 +183,4 @@ Errors: 0
 Failures: 0
 ✅ ALL TESTS PASSED! ✅
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
