@@ -41,7 +41,7 @@ To run the Task CLI application, you'll need to set up your environment and ensu
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/task-cli.git
+git clone https://github.com/bykplx1/task-cli.git
 cd task-cli
 ```
 
